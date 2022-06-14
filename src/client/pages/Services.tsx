@@ -1,7 +1,61 @@
 import * as React from "react";
+import "../scss/servicesStyles.scss";
 
 const Services = () => {
   let backgroundImagePath = "/imgs/trippyguitar.jpg";
+
+  let returnCardsForServices = (title: string, info: string) => {
+    return (
+      <div
+        className="col-4 card services-cards-caontainer"
+        style={{ backgroundColor: "black" }}
+      >
+        <div className="cardbody services-cards-info">
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text card-subtitle" style={{ color: "gray" }}>
+            {info}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  let returnsCardForStudio = (
+    title: string,
+    infoOne: string,
+    infotwo: string,
+    infothree: string,
+    infofour: string,
+    infofive: string,
+    infosix: string
+  ) => {
+    return (
+      <div className="card col-6" style={{ backgroundColor: "black" }}>
+        <div className="card-body d-flex flex-wrap">
+          <h5 className="card-title col-12">{title}</h5>
+          <p className="card-text col-6" style={{ color: "gray" }}>
+            {infoOne}
+          </p>
+          <p className="card-text col-6" style={{ color: "gray" }}>
+            {infotwo}
+          </p>
+          <p className="card-text col-6" style={{ color: "gray" }}>
+            {infothree}
+          </p>
+          <p className="card-text col-6" style={{ color: "gray" }}>
+            {infofour}
+          </p>
+          <p className="card-text col-6" style={{ color: "gray" }}>
+            {infofive}
+          </p>
+          <p className="card-text col-6" style={{ color: "gray" }}>
+            {infosix}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <img
@@ -11,7 +65,7 @@ const Services = () => {
         width={"100%"}
         style={{ position: "fixed", zIndex: "-1" }}
       />
-      <div>
+      <div style={{ color: "white", backgroundColor: "black" }}>
         <div
           className="services-container card text-center"
           style={{ backgroundColor: "black" }}
@@ -20,88 +74,60 @@ const Services = () => {
             <h3>Services</h3>
           </div>
           <div className="d-flex flex-wrap">
-            <div className="col-4 card">
-              <div className="cardbody">
-                <h5 className="card-title">Music Production</h5>
-                <p className="card-text">
-                  from indipendant artists to bands, from singles to albums.
-                  Lets bring your music to life!
-                </p>
-              </div>
-            </div>
-            <div className="col-4 card">
-              <div className="cardbody">
-                <h5 className="card-title">Mixing & Mastering</h5>
-                <p className="card-text">
-                  make your music stand out with quality sounding audio for any
-                  platform or device
-                </p>
-              </div>
-            </div>
-            <div className="col-4 card">
-              <div className="cardbody">
-                <h5 className="card-title">Music Composition</h5>
-                <p className="card-text">
-                  expand and develop your music or create something entirely new
-                </p>
-              </div>
-            </div>
-            <div className="col-4 card">
-              <div className="cardbody">
-                <h5 className="card-title">Music Scoring</h5>
-                <p className="card-text">
-                  take the viewing experience to the next level by adding
-                  soundscapes and textures
-                </p>
-              </div>
-            </div>
-            <div className="col-4 card">
-              <div className="cardbody">
-                <h5 className="card-title">Sound Design</h5>
-                <p className="card-text">
-                  add depth depth to your project with SFX, Foley, Ambiance, and
-                  more
-                </p>
-              </div>
-            </div>
-            <div className="col-4 card">
-              <div className="cardbody">
-                <h5 className="card-title">Audio Editing</h5>
-                <p className="card-text">
-                  improve and incorporate your own audio in your own way
-                </p>
-              </div>
-            </div>
+            {returnCardsForServices(
+              "Music Production",
+              "from indipendant artists to bands, from singles to albums. Lets bring your music to life!"
+            )}
+            {returnCardsForServices(
+              "Mixing & Mastering",
+              "make your music stand out with quality sounding audio for any platform or device"
+            )}
+            {returnCardsForServices(
+              "Music Composition",
+              "expand and develop your music or create something entirely new"
+            )}
+            {returnCardsForServices(
+              "Music Scoring",
+              "take the viewing experience to the next level by adding soundscapes and textures"
+            )}
+
+            {returnCardsForServices(
+              "Sound Design",
+              "add depth depth to your project with SFX, Foley, Ambiance, and more"
+            )}
+            {returnCardsForServices(
+              "Audio Editing",
+              "improve and incorporate your own audio in your own way"
+            )}
           </div>
         </div>
 
-        <div className="studio-container card text-center">
+        <div
+          className="studio-container card text-center"
+          style={{ backgroundColor: "black" }}
+        >
           <div>
             <h3>Studio</h3>
           </div>
           <div className="d-flex flex-wrap">
-            <div className="card col-6">
-              <div className="card-body d-flex flex-wrap">
-                <h5 className="card-title col-12">DAWS & Tools</h5>
-                <p className="card-text col-6">Protools</p>
-                <p className="card-text col-6">iZotope</p>
-                <p className="card-text col-6">Universal Audio</p>
-                <p className="card-text col-6">Soundtoys</p>
-                <p className="card-text col-6">Native Instruments</p>
-                <p className="card-text col-6">EWQL</p>
-              </div>
-            </div>
-            <div className="card col-6">
-              <div className="card-body d-flex flex-wrap">
-                <h5 className="card-title col-12">Intruments</h5>
-                <p className="card-text col-6">Guitar</p>
-                <p className="card-text col-6">Piano</p>
-                <p className="card-text col-6">Bass</p>
-                <p className="card-text col-6">Synthesizer</p>
-                <p className="card-text col-6">Ukele</p>
-                <p className="card-text col-6">percussion</p>
-              </div>
-            </div>
+            {returnsCardForStudio(
+              "DAWS & Tools",
+              "Protools",
+              "iZotope",
+              "Universal Audio",
+              "Soundtoys",
+              "Native Instruments",
+              "EWQL"
+            )}
+            {returnsCardForStudio(
+              "Intruments",
+              "Guitar",
+              "Piano",
+              "Bass",
+              "Synthesizer",
+              "Ukele",
+              "percussion"
+            )}
           </div>
         </div>
       </div>
