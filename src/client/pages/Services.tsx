@@ -69,15 +69,24 @@ const Services = () => {
         alt=""
         height={"100%"}
         width={"100%"}
-        style={{ position: "sticky", top:"0", zIndex: "-1" }}
+        style={{ position: "sticky", top: "0", zIndex: "-1" }}
       />
-      <div style={{ color: "white", paddingBottom: "35%"}}>
+      <div style={{ color: "white", paddingBottom: "30%" }}>
         <div
           className="services-container card text-center"
-          style={{ backgroundColor: "black" }}
+          style={{
+            backgroundColor: "black",
+            borderRadius: "100px",
+            marginLeft: "10px",
+            marginRight: "10px",
+            paddingBottom: "60px",
+            paddingTop: "50px",
+          }}
         >
           <div>
-            <h3 style={{ fontSize: "60px", paddingBottom:"10px" }}>Services</h3>
+            <h3 style={{ fontSize: "60px", paddingBottom: "10px" }}>
+              Services
+            </h3>
           </div>
           <div className="d-flex flex-wrap">
             <div className="d-flex flex-wrap justify-content-around col-12">
@@ -114,7 +123,17 @@ const Services = () => {
 
         <div
           className="studio-container card text-center"
-          style={{ backgroundColor: "black", marginTop:"45%" }}
+          style={{
+            backgroundColor: "black",
+            marginTop: "45%",
+            borderRadius: "100px",
+            marginLeft: "10px",
+            marginRight: "10px",
+            paddingBottom: "60px",
+            paddingTop: "50px",
+            paddingRight: "10px",
+            paddingLeft: "10px",
+          }}
         >
           <div>
             <h3 style={{ fontSize: "60px" }}>Studio</h3>
@@ -146,9 +165,22 @@ const Services = () => {
         </div>
         <div>
           <div className="d-flex flex-wrap justify-content-around col-12">
-            <div className="d-flex flex-wrap justify-content-center card-bodycol-5" style={{backgroundColor: "black", marginTop:"20%"}}>
-              <h5 className="col-12 text-center">Can't find the service for you?</h5>
-              <button className="btn btn-primary">Contact me!</button>
+            <div
+              className="d-flex flex-wrap justify-content-center card-bodycol-5"
+              style={{
+                backgroundColor: "black",
+                marginTop: "20%",
+                paddingTop: "50px",
+                paddingBottom: "50px",
+                borderRadius:"50px"
+              }}
+            >
+              <h5 className="col-12 text-center">
+                Can't find the service for you?
+              </h5>
+              <button className="btn btn-link" style={{ color: "blueviolet" }}>
+                Contact me!
+              </button>
             </div>
           </div>
         </div>
