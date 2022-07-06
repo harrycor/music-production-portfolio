@@ -6,7 +6,7 @@ const Home = () => {
   let portraitColorPath = "/imgs/portraitcolor.JPG";
 
   return (
-    <div style={{ color: "white" }}>
+    <div style={{ color: "white", marginBottom:"50%" }}>
       <img
         src={backgroundImagePath}
         alt=""

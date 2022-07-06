@@ -6,7 +6,7 @@ const Work = () => {
   let theNATCoverImgPath = "/imgs/natcover.jpg";
 
   return (
-    <div>
+    <div style={{marginBottom:"50%"}}>
       <img
         src={backgroundImagePath}
         alt=""
