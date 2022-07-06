@@ -172,15 +172,19 @@ const Services = () => {
                 marginTop: "20%",
                 paddingTop: "50px",
                 paddingBottom: "50px",
-                borderRadius:"50px"
+                borderRadius: "50px",
               }}
             >
               <h5 className="col-12 text-center">
                 Can't find the service for you?
               </h5>
-              <button className="btn btn-link" style={{ color: "blueviolet" }}>
+              <a
+                href="mailto:harrycorradi1@gmail.com?subject=Harry Corradi Productions Contact Form"
+                className="btn btn-link"
+                style={{ color: "blueviolet" }}
+              >
                 Contact me!
-              </button>
+              </a>
             </div>
           </div>
         </div>
